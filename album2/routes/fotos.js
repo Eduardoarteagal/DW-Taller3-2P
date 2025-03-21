@@ -9,4 +9,10 @@ router.get('/findAll/view', fotosController.findAllView);
 router.get('/findAllByRate/json', fotosController.findAllByRateJson);
 router.get('/fotosPorRango', fotosController.mostrarFotosPorRango);
 
+router.get('/fotos/agregar', (req, res) => {
+    res.render('fotos_agregar');
+});
+
+router.post('/fotos/agregar', fotosController.guardarFoto);
+
 module.exports = router;
